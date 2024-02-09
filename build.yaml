@@ -1,0 +1,19 @@
+targets:
+  $default:
+    builders:
+      json_serializable|json_serializable:
+        generate_for:
+          - "**/models/**.dart"
+        options:
+          field_rename: pascal
+      freezed|freezed:
+        generate_for:
+          - "**/application/**_state.dart"
+          - "lib/domain/failure/models/**.dart"
+      riverpod_generator|riverpod_generator:
+        generate_for:
+          - "**/application/**_controller.dart"
+          - "lib/core/utils/providers.dart"
+      retrofit_generator|retrofit_generator:
+        generate_for:
+          - "**/data/**/**_datasource.dart"

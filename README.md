@@ -1,0 +1,2 @@
+# cashfy
+Money management app

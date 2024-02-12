@@ -19,7 +19,7 @@ abstract class CashfyInputDecorationTheme {
     fillColor: CashfyColorTheme.baseLight40,
     filled: true,
     contentPadding: _padding,
-    hintStyle: TextStyle(
+    hintStyle: const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w400,
       color: CashfyColorTheme.baseLight80,

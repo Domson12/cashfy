@@ -13,7 +13,7 @@ abstract class CashfyButtonTheme {
           ),
           padding: _padding,
           elevation: 0,
-          textStyle: TextStyle(
+          textStyle: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
@@ -31,7 +31,7 @@ abstract class CashfyButtonTheme {
           ),
           padding: _padding,
           elevation: 0,
-          side: BorderSide(
+          side: const BorderSide(
             color: Color(0xff7f3dff),
           ),
           backgroundColor: CashfyColorTheme.violet40,
@@ -44,7 +44,7 @@ abstract class CashfyButtonTheme {
   static TextButtonThemeData get textLight => TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: CashfyColorTheme.baseLight20,
-          textStyle: TextStyle(
+          textStyle: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),

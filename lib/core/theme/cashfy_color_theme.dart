@@ -47,19 +47,16 @@ abstract class CashfyColorTheme {
   static const ColorScheme schemeLight = ColorScheme.light(
     primary: violet100,
     secondary: blue100,
-    surface: baseLight100,
-    background: baseLight100,
     error: red100,
-    onPrimary: baseLight100,
     onSecondary: baseLight100,
     onSurface: baseDark100,
     onBackground: baseDark100,
-    onError: baseLight100,
     primaryContainer: baseLight80,
     onPrimaryContainer: baseDark100,
     outline: baseLight40,
     outlineVariant: baseLight20,
     onTertiary: baseDark100,
     scrim: baseLight60,
+    inversePrimary: violet20,
   );
 }

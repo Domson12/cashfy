@@ -1,3 +1,11 @@
 {
-  "@@locale": "en"
+  "@@locale": "en",
+  "auth_title1": "Gain total control of your money",
+  "auth_desc1": "Become your own money manager and make every cent count",
+  "auth_title2": "Know where your money goes",
+  "auth_desc2": "Track your transaction easily, with categories and financial report",
+  "auth_title3": "Planning ahead",
+  "auth_desc3": "Setup your budget for each category so you in control",
+  "sign_up": "Sign up",
+  "login": "Login"
 }

@@ -24,7 +24,7 @@ dependencies:
   json_annotation: ^4.8.1
   flutter_gen: ^5.3.1
   auto_route: ^7.7.1
-  flutter_native_splash: ^2.3.5
+  flutter_native_splash: ^2.3.10
   flutter_svg: ^2.0.7
   image_picker: ^1.0.4
   flutter_form_builder: ^9.1.0
@@ -62,13 +62,12 @@ dependencies:
   riverpod: ^2.5.0
   supabase_flutter: ^2.3.3
   flutter_dotenv: ^5.1.0
-
-
-
+  analyzer: ^6.2.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   flutter_lints: ^3.0.1
   json_serializable: ^6.7.1
   freezed: ^2.4.5
@@ -78,20 +77,44 @@ dev_dependencies:
   riverpod_generator: ^2.3.5
   retrofit_generator: ^8.0.5
 
+flutter_native_splash:
+  android: true
+  ios: true
+  web: false
+
+  color: "#7F3DFF"
+  image: "assets/images/logo.png"
+
+
+  android_12:
+    color: "#7F3DFF"
+    image: "assets/images/logo.png"
+#    branding: "assets/images/branding.png"
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.png"
+  background_color: "#7F3DFF"
+  adaptive_icon_background: "#7F3DFF"
+  adaptive_icon_foreground: "assets/images/logo.png"
+
 flutter_gen:
   integrations:
     flutter_svg: true
     lottie: true
 
-flutter:
 
+flutter:
   uses-material-design: true
 
   assets:
     - .env
+    - assets/images/
 
 flutter_intl:
   enabled: true
   class_name: S
   arb_dir: assets/l10n
   output_dir: lib/gen
+  synthetic_package: false

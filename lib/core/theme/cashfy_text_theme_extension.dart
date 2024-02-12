@@ -6,15 +6,6 @@ extension XTheme on ThemeData {
 
 class CashfyTextThemeExtension
     extends ThemeExtension<CashfyTextThemeExtension> {
-  final TextStyle tiny;
-  final TextStyle small;
-  final TextStyle body3;
-  final TextStyle body2;
-  final TextStyle body1;
-  final TextStyle title3;
-  final TextStyle title2;
-  final TextStyle title1;
-  final TextStyle titleX;
 
   const CashfyTextThemeExtension({
     required this.tiny,
@@ -112,6 +103,15 @@ class CashfyTextThemeExtension
           letterSpacing: 0,
         ),
       );
+  final TextStyle tiny;
+  final TextStyle small;
+  final TextStyle body3;
+  final TextStyle body2;
+  final TextStyle body1;
+  final TextStyle title3;
+  final TextStyle title2;
+  final TextStyle title1;
+  final TextStyle titleX;
 
   @override
   ThemeExtension<CashfyTextThemeExtension> copyWith({

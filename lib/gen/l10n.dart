@@ -49,6 +49,86 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Gain total control of your money`
+  String get auth_title1 {
+    return Intl.message(
+      'Gain total control of your money',
+      name: 'auth_title1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Become your own money manager and make every cent count`
+  String get auth_desc1 {
+    return Intl.message(
+      'Become your own money manager and make every cent count',
+      name: 'auth_desc1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Know where your money goes`
+  String get auth_title2 {
+    return Intl.message(
+      'Know where your money goes',
+      name: 'auth_title2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Track your transaction easily, with categories and financial report`
+  String get auth_desc2 {
+    return Intl.message(
+      'Track your transaction easily, with categories and financial report',
+      name: 'auth_desc2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Planning ahead`
+  String get auth_title3 {
+    return Intl.message(
+      'Planning ahead',
+      name: 'auth_title3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Setup your budget for each category so you in control`
+  String get auth_desc3 {
+    return Intl.message(
+      'Setup your budget for each category so you in control',
+      name: 'auth_desc3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up`
+  String get sign_up {
+    return Intl.message(
+      'Sign up',
+      name: 'sign_up',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

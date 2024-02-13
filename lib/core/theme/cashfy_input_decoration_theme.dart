@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'cashfy_color_theme.dart';
+import 'cashfy_theme.dart';
 
 enum BorderType { disabled, enabled, focused, error, focusedError }
 
@@ -16,13 +17,11 @@ abstract class CashfyInputDecorationTheme {
     focusedErrorBorder: borderLight(BorderType.focusedError),
     enabledBorder: borderLight(BorderType.enabled),
     disabledBorder: borderLight(BorderType.disabled),
-    fillColor: CashfyColorTheme.baseLight40,
+    fillColor: Colors.transparent,
     filled: true,
     contentPadding: _padding,
-    hintStyle: const TextStyle(
-      fontSize: 16,
-      fontWeight: FontWeight.w400,
-      color: CashfyColorTheme.baseLight80,
+    hintStyle: CashfyTheme.textStyleExtension.body1.copyWith(
+      color: CashfyColorTheme.baseLight20,
       height: 1,
     ),
   );
@@ -31,8 +30,8 @@ abstract class CashfyInputDecorationTheme {
     final radius = BorderRadius.circular(8);
 
     final borderColor = switch (type) {
-      BorderType.enabled => CashfyColorTheme.violet40,
-      BorderType.disabled => CashfyColorTheme.violet20,
+      BorderType.enabled => CashfyColorTheme.baseLight20,
+      BorderType.disabled => CashfyColorTheme.baseLight20,
       BorderType.focused => CashfyColorTheme.violet100,
       BorderType.error => CashfyColorTheme.violet100,
       BorderType.focusedError => CashfyColorTheme.violet100,

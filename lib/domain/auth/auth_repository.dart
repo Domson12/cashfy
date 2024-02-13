@@ -1,0 +1,29 @@
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import '../../data/supabase_datasource.dart';
+import '../failure/catch_exception.dart';
+import '../failure/models/failure.dart';
+
+final authRepositoryProvider = Provider<AuthRepository>(
+  AuthRepository.new,
+);
+
+class AuthRepository {
+  AuthRepository(this._ref);
+
+  final ProviderRef<AuthRepository> _ref;
+
+  FailableFuture<void> register(
+    String email,
+    String password,
+    String username,
+  ) {
+    return catchException(
+      () => _ref.read(supabaseDatasourceProvider).register(
+            email,
+            password,
+            username,
+          ),
+    );
+  }
+}

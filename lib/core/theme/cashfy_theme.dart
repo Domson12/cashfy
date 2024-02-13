@@ -47,6 +47,26 @@ abstract class CashfyTheme {
         return null;
       }),
     ),
+    checkboxTheme: CheckboxThemeData(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(4),
+      ),
+      side: BorderSide(
+        color: CashfyColorTheme.schemeLight.outline,
+      ),
+      fillColor: MaterialStateProperty.resolveWith((states) {
+        if (states.contains(MaterialState.selected)) {
+          return CashfyColorTheme.schemeLight.primary;
+        }
+        return CashfyColorTheme.schemeLight.outline;
+      }),
+      checkColor: MaterialStateProperty.resolveWith((states) {
+        if (states.contains(MaterialState.selected)) {
+          return CashfyColorTheme.schemeLight.background;
+        }
+        return CashfyColorTheme.schemeLight.primary;
+      }),
+    ),
     switchTheme: SwitchThemeData(
       thumbColor: MaterialStateProperty.resolveWith((states) {
         if (states.contains(MaterialState.selected)) {

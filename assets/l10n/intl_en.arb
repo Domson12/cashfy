@@ -7,5 +7,22 @@
   "auth_title3": "Planning ahead",
   "auth_desc3": "Setup your budget for each category so you in control",
   "sign_up": "Sign up",
-  "login": "Login"
+  "login": "Login",
+  "err_pass_match": "Passwords do not match",
+  "repeat_password": "Repeat password",
+  "email": "Email",
+  "password": "Password",
+  "confirm_password": "Confirm password",
+  "err_too_short": "Minimum character length: {minLength}.",
+  "err_char_and_digits": "Only characters and digits are allowed",
+  "err_phone_number": "Invalid phone number, please use format: +1234567890",
+  "err_email": "Invalid email address.",
+  "err_empty_field": "This field is required",
+  "welcome_to": "Welcome to ",
+  "app_name_title": "Cashfy!",
+  "username": "Username",
+  "or_with": "Or with",
+  "sign_in_google": "Sign in with Google",
+  "dont_have_acount": "Don't have an account?",
+  "already_have_an_account": "Already have an account?"
 }

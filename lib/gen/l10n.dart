@@ -129,6 +129,176 @@ class S {
       args: [],
     );
   }
+
+  /// `Passwords do not match`
+  String get err_pass_match {
+    return Intl.message(
+      'Passwords do not match',
+      name: 'err_pass_match',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Repeat password`
+  String get repeat_password {
+    return Intl.message(
+      'Repeat password',
+      name: 'repeat_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm password`
+  String get confirm_password {
+    return Intl.message(
+      'Confirm password',
+      name: 'confirm_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Minimum character length: {minLength}.`
+  String err_too_short(Object minLength) {
+    return Intl.message(
+      'Minimum character length: $minLength.',
+      name: 'err_too_short',
+      desc: '',
+      args: [minLength],
+    );
+  }
+
+  /// `Only characters and digits are allowed`
+  String get err_char_and_digits {
+    return Intl.message(
+      'Only characters and digits are allowed',
+      name: 'err_char_and_digits',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid phone number, please use format: +1234567890`
+  String get err_phone_number {
+    return Intl.message(
+      'Invalid phone number, please use format: +1234567890',
+      name: 'err_phone_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email address.`
+  String get err_email {
+    return Intl.message(
+      'Invalid email address.',
+      name: 'err_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This field is required`
+  String get err_empty_field {
+    return Intl.message(
+      'This field is required',
+      name: 'err_empty_field',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to `
+  String get welcome_to {
+    return Intl.message(
+      'Welcome to ',
+      name: 'welcome_to',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cashfy!`
+  String get app_name_title {
+    return Intl.message(
+      'Cashfy!',
+      name: 'app_name_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Username`
+  String get username {
+    return Intl.message(
+      'Username',
+      name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Or with`
+  String get or_with {
+    return Intl.message(
+      'Or with',
+      name: 'or_with',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in with Google`
+  String get sign_in_google {
+    return Intl.message(
+      'Sign in with Google',
+      name: 'sign_in_google',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account?`
+  String get dont_have_acount {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'dont_have_acount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account?`
+  String get already_have_an_account {
+    return Intl.message(
+      'Already have an account?',
+      name: 'already_have_an_account',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

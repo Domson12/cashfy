@@ -1,6 +1,6 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../data/supabase_datasource.dart';
+import '../../data/supabase_auth_datasource.dart';
 import '../failure/catch_exception.dart';
 import '../failure/models/failure.dart';
 
@@ -19,11 +19,39 @@ class AuthRepository {
     String username,
   ) {
     return catchException(
-      () => _ref.read(supabaseDatasourceProvider).register(
+      () => _ref.read(supabaseAuthDatasourceProvider).register(
             email,
             password,
             username,
           ),
     );
+  }
+
+  FailableFuture<void> login(String email, String password) {
+    return catchException(
+      () => _ref.read(supabaseAuthDatasourceProvider).login(
+            email,
+            password,
+          ),
+    );
+  }
+
+  FailableFuture<void> verify(String token) {
+    return catchException(
+      () => _ref.read(supabaseAuthDatasourceProvider).verify(token),
+    );
+  }
+
+  FailableFuture<void> resendEmailVerification(String email) {
+    return catchException(
+      () => _ref
+          .read(supabaseAuthDatasourceProvider)
+          .resendEmailVerification(email),
+    );
+  }
+
+  //is user verified
+  Future<bool> isUserVerified() async {
+    return _ref.read(supabaseAuthDatasourceProvider).isUserVerified();
   }
 }

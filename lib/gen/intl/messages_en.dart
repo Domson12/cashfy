@@ -38,21 +38,39 @@ class MessageLookup extends MessageLookupByLibrary {
         "auth_title2":
             MessageLookupByLibrary.simpleMessage("Know where your money goes"),
         "auth_title3": MessageLookupByLibrary.simpleMessage("Planning ahead"),
+        "check_inbox": MessageLookupByLibrary.simpleMessage(
+            "You can check your inbox or spam folder"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
         "dont_have_acount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "email_send": MessageLookupByLibrary.simpleMessage(
+            "We send verification code to your email "),
+        "enter_verification_code": MessageLookupByLibrary.simpleMessage(
+            "Enter your Verification Code"),
+        "err_already_exists":
+            MessageLookupByLibrary.simpleMessage("user already exists"),
         "err_char_and_digits": MessageLookupByLibrary.simpleMessage(
             "Only characters and digits are allowed"),
+        "err_database": MessageLookupByLibrary.simpleMessage("Database error"),
         "err_email":
             MessageLookupByLibrary.simpleMessage("Invalid email address."),
         "err_empty_field":
             MessageLookupByLibrary.simpleMessage("This field is required"),
+        "err_internal_server":
+            MessageLookupByLibrary.simpleMessage("Internal server error"),
+        "err_internar_server":
+            MessageLookupByLibrary.simpleMessage("Internal server error"),
+        "err_not_allowed": MessageLookupByLibrary.simpleMessage("Not allowed"),
+        "err_not_found":
+            MessageLookupByLibrary.simpleMessage("Error, not found"),
         "err_pass_match":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
         "err_phone_number": MessageLookupByLibrary.simpleMessage(
             "Invalid phone number, please use format: +1234567890"),
+        "err_something_went_wrong": MessageLookupByLibrary.simpleMessage(
+            "Something went wrong. Please try again later."),
         "err_too_short": m0,
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "or_with": MessageLookupByLibrary.simpleMessage("Or with"),
@@ -63,6 +81,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sign in with Google"),
         "sign_up": MessageLookupByLibrary.simpleMessage("Sign up"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),
+        "verification": MessageLookupByLibrary.simpleMessage("Verification"),
+        "verification_send_again": MessageLookupByLibrary.simpleMessage(
+            "Didn’t received the code? Send again"),
+        "verify": MessageLookupByLibrary.simpleMessage("Verify"),
         "welcome_to": MessageLookupByLibrary.simpleMessage("Welcome to ")
       };
 }

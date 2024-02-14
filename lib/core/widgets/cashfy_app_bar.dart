@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 
-class CashfyAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CashfyAppBar({required this.title, super.key});
+import '../utils/extensions.dart';
 
-  final Widget title;
+class CashfyAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const CashfyAppBar({this.title, super.key});
+
+  final String? title;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: title,
+      title: Text(
+        title ?? '',
+        style: context.xText.title3.copyWith(
+          color: context.colorScheme.onBackground,
+        ),
+      ),
       centerTitle: true,
       backgroundColor: Colors.transparent,
       elevation: 0,

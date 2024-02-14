@@ -24,5 +24,18 @@
   "or_with": "Or with",
   "sign_in_google": "Sign in with Google",
   "dont_have_acount": "Don't have an account?",
-  "already_have_an_account": "Already have an account?"
+  "already_have_an_account": "Already have an account?",
+  "err_not_found": "Error, not found",
+  "err_already_exists": "user already exists",
+  "err_not_allowed": "Not allowed",
+  "err_internar_server": "Internal server error",
+  "err_internal_server": "Internal server error",
+  "err_database": "Database error",
+  "verification": "Verification",
+  "enter_verification_code": "Enter your Verification Code",
+  "email_send": "We send verification code to your email ",
+  "check_inbox": "You can check your inbox or spam folder",
+  "verification_send_again": "Didn’t received the code? Send again",
+  "verify": "Verify",
+  "err_something_went_wrong": "Something went wrong. Please try again later."
 }

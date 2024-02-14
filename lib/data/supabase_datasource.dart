@@ -1,6 +1,12 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import '../domain/user/models/user_model.dart';
+
+const _email = 'email';
+const _isVerified = 'is_verified';
+const _users = 'users';
+
 final supabaseDatasourceProvider = Provider<SupabaseDatasource>(
   (ref) {
     return SupabaseDatasource();
@@ -10,32 +16,20 @@ final supabaseDatasourceProvider = Provider<SupabaseDatasource>(
 class SupabaseDatasource {
   final _supabase = Supabase.instance;
 
-  //register
-  Future<void> register(
-    String email,
-    String password,
-    String username,
-  ) async {
-    await _supabase.client.auth.signUp(
-      email: email,
-      password: password,
-      data: {
-        'display_name': username,
-        'email': email,
-      },
-    );
+  //get user data
+  Future<UserModel> getCurrentUserData(String email) async {
+    final response = await _supabase.client.from(_users).select().eq(
+          _email,
+          email,
+        );
+    return UserModel.fromJson(response.first);
   }
 
-  //send sms verification code
-  Future<void> sendSmsVerificationCode(String token) async {
-    await _supabase.client.auth.verifyOTP(token: token, type: OtpType.email);
-  }
-
-  //login
-  Future<void> login(String email, String password) async {
-    await _supabase.client.auth.signInWithPassword(
-      email: email,
-      password: password,
+  //set user is_verified to true
+  Future<void> updateUserVerifyStatus(String email) async {
+    await _supabase.client.from(_users).update({_isVerified: true}).eq(
+      _email,
+      email,
     );
   }
 }

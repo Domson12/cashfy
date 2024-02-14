@@ -9,6 +9,7 @@ import '../../../../core/utils/validators.dart';
 import '../../../../core/widgets/cashfy_external_auth_section.dart';
 import '../../../../core/widgets/cashfy_text_auth_button.dart';
 import '../../../../core/widgets/cashfy_text_form_field.dart';
+import '../../verification/application/verification_controller.dart';
 import '../application/register_controller.dart';
 import 'register_checkbox_field.dart';
 import 'register_title_section.dart';
@@ -23,6 +24,35 @@ class RegisterForm extends HookConsumerWidget {
     final passwordController = useTextEditingController();
     final confirmPasswordController = useTextEditingController();
     final formKey = GlobalKey<FormState>();
+
+    ref.listen(
+      registerControllerProvider,
+      (previous, next) {
+        next.maybeWhen(
+          orElse: () {},
+          success: () {
+            ref
+                .read(verificationControllerProvider.notifier)
+                .isUserVerified()
+                .then(
+              (value) {
+                debugPrint(value.toString());
+                if (value) {
+                  //TODO: implement this
+                  // context.router.push(
+                  //   const HomeRoute(),
+                  // );
+                } else {
+                  context.router.push(
+                    VerificationRoute(email: emailController.text),
+                  );
+                }
+              },
+            );
+          },
+        );
+      },
+    );
 
     return Form(
       key: formKey,
@@ -67,12 +97,14 @@ class RegisterForm extends HookConsumerWidget {
           SizedBox(
             width: double.maxFinite,
             child: ElevatedButton(
-              onPressed: () =>
-                  ref.read(registerControllerProvider.notifier).register(
-                        usernameController.text,
-                        emailController.text,
-                        passwordController.text,
-                      ),
+              onPressed: () {
+                if (formKey.currentState?.validate() != true) return;
+                ref.read(registerControllerProvider.notifier).register(
+                      usernameController.text,
+                      emailController.text,
+                      passwordController.text,
+                    );
+              },
               child: Text(
                 context.s.sign_up,
                 style: context.xText.title3,
@@ -81,11 +113,13 @@ class RegisterForm extends HookConsumerWidget {
           ),
           const CashfyExternalAuthSection(),
           const SizedBox(height: 16),
-          CashfyTextAuthButton.login(
-            onTap: () => context.router.push(
-              const LoginRoute(),
+          Align(
+            child: CashfyTextAuthButton.login(
+              onTap: () => context.router.push(
+                const LoginRoute(),
+              ),
+              context: context,
             ),
-            context: context,
           ),
         ],
       ),

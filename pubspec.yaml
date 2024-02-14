@@ -65,6 +65,8 @@ dependencies:
   analyzer: ^6.2.0
   webview_flutter: ^4.7.0
   another_flushbar: ^1.12.30
+  flutter_keyboard_visibility: ^6.0.0
+  pin_code_fields: ^8.0.1
 
 dev_dependencies:
   flutter_test:

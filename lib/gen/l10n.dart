@@ -299,6 +299,136 @@ class S {
       args: [],
     );
   }
+
+  /// `Error, not found`
+  String get err_not_found {
+    return Intl.message(
+      'Error, not found',
+      name: 'err_not_found',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `user already exists`
+  String get err_already_exists {
+    return Intl.message(
+      'user already exists',
+      name: 'err_already_exists',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not allowed`
+  String get err_not_allowed {
+    return Intl.message(
+      'Not allowed',
+      name: 'err_not_allowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Internal server error`
+  String get err_internar_server {
+    return Intl.message(
+      'Internal server error',
+      name: 'err_internar_server',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Internal server error`
+  String get err_internal_server {
+    return Intl.message(
+      'Internal server error',
+      name: 'err_internal_server',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Database error`
+  String get err_database {
+    return Intl.message(
+      'Database error',
+      name: 'err_database',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verification`
+  String get verification {
+    return Intl.message(
+      'Verification',
+      name: 'verification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your Verification Code`
+  String get enter_verification_code {
+    return Intl.message(
+      'Enter your Verification Code',
+      name: 'enter_verification_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We send verification code to your email `
+  String get email_send {
+    return Intl.message(
+      'We send verification code to your email ',
+      name: 'email_send',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can check your inbox or spam folder`
+  String get check_inbox {
+    return Intl.message(
+      'You can check your inbox or spam folder',
+      name: 'check_inbox',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Didn’t received the code? Send again`
+  String get verification_send_again {
+    return Intl.message(
+      'Didn’t received the code? Send again',
+      name: 'verification_send_again',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify`
+  String get verify {
+    return Intl.message(
+      'Verify',
+      name: 'verify',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something went wrong. Please try again later.`
+  String get err_something_went_wrong {
+    return Intl.message(
+      'Something went wrong. Please try again later.',
+      name: 'err_something_went_wrong',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

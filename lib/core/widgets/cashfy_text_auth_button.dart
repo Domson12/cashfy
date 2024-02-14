@@ -4,8 +4,9 @@ import '../utils/extensions.dart';
 
 class CashfyTextAuthButton extends StatelessWidget {
   const CashfyTextAuthButton({
-    required this.text,
-    required this.clickableText,
+    this.padding = const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+    this.text,
+    this.clickableText,
     this.onTap,
     super.key,
   });
@@ -32,30 +33,34 @@ class CashfyTextAuthButton extends StatelessWidget {
     );
   }
 
-  final String text;
-  final String clickableText;
+  final String? text;
+  final String? clickableText;
   final VoidCallback? onTap;
+  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
+      borderRadius: BorderRadius.circular(16),
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+        padding: padding,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              text,
-              style: context.xText.body1.copyWith(
-                color: context.colorScheme.outline,
+            if (text != null)
+              Text(
+                text ?? '',
+                style: context.xText.body1.copyWith(
+                  color: context.colorScheme.outline,
+                ),
               ),
-            ),
             const SizedBox(width: 4),
             Text(
-              clickableText,
+              clickableText ?? '',
               style: context.xText.body1.copyWith(
                 color: context.colorScheme.primary,
               ),

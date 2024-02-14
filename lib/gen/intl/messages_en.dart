@@ -62,6 +62,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Internal server error"),
         "err_internar_server":
             MessageLookupByLibrary.simpleMessage("Internal server error"),
+        "err_invalid_code":
+            MessageLookupByLibrary.simpleMessage("Invalid code"),
         "err_not_allowed": MessageLookupByLibrary.simpleMessage("Not allowed"),
         "err_not_found":
             MessageLookupByLibrary.simpleMessage("Error, not found"),
@@ -82,6 +84,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_up": MessageLookupByLibrary.simpleMessage("Sign up"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),
         "verification": MessageLookupByLibrary.simpleMessage("Verification"),
+        "verification_info": MessageLookupByLibrary.simpleMessage(
+            "If email is taken, you won\'t be able to use it again."),
         "verification_send_again": MessageLookupByLibrary.simpleMessage(
             "Didn’t received the code? Send again"),
         "verify": MessageLookupByLibrary.simpleMessage("Verify"),

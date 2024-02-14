@@ -13,21 +13,9 @@ class VerificationController extends _$VerificationController {
   }
 
   //verify
-  Future<void> verifyCode(String code) async {
+  Future<void> verifyCode(String code, String email) async {
     state = const VerificationState.loading();
-    final result = await ref.watch(authRepositoryProvider).verify(code);
-    //result isOption<Failure>
-    result.fold(
-      (f) => state = VerificationState.error(f),
-      (_) => state = const VerificationState.success(),
-    );
-  }
-
-  //resend
-  Future<void> resendCode(String email) async {
-    state = const VerificationState.loading();
-    final result =
-        await ref.watch(authRepositoryProvider).resendEmailVerification(email);
+    final result = await ref.watch(authRepositoryProvider).verify(code, email);
     //result isOption<Failure>
     result.fold(
       (f) => state = VerificationState.error(f),

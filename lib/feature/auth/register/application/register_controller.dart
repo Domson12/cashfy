@@ -29,6 +29,18 @@ class RegisterController extends _$RegisterController {
     );
   }
 
+  //resend
+  Future<void> resendCode(String email) async {
+    state = const RegisterState.loading();
+    final result =
+        await ref.watch(authRepositoryProvider).resendEmailVerification(email);
+    //result isOption<Failure>
+    result.fold(
+      (f) => state = RegisterState.error(f),
+      (_) => state = const RegisterState.success(),
+    );
+  }
+
   void resetState() {
     state = const RegisterState.initial();
   }

@@ -42,8 +42,12 @@ class SupabaseAuthDatasource {
   }
 
   //verify
-  Future<void> verify(String token) async {
-    await _supabase.client.auth.verifyOTP(token: token, type: OtpType.email);
+  Future<void> verify(String token, String email) async {
+    await _supabase.client.auth.verifyOTP(
+      email: email,
+      token: token,
+      type: OtpType.email,
+    );
   }
 
   //resend email verification

@@ -429,6 +429,26 @@ class S {
       args: [],
     );
   }
+
+  /// `If email is taken, you won't be able to use it again.`
+  String get verification_info {
+    return Intl.message(
+      'If email is taken, you won\'t be able to use it again.',
+      name: 'verification_info',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid code`
+  String get err_invalid_code {
+    return Intl.message(
+      'Invalid code',
+      name: 'err_invalid_code',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

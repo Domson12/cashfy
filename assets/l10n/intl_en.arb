@@ -37,5 +37,7 @@
   "check_inbox": "You can check your inbox or spam folder",
   "verification_send_again": "Didn’t received the code? Send again",
   "verify": "Verify",
-  "err_something_went_wrong": "Something went wrong. Please try again later."
+  "err_something_went_wrong": "Something went wrong. Please try again later.",
+  "verification_info": "If email is taken, you won't be able to use it again.",
+  "err_invalid_code": "Invalid code"
 }

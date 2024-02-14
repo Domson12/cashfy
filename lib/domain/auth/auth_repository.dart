@@ -36,9 +36,9 @@ class AuthRepository {
     );
   }
 
-  FailableFuture<void> verify(String token) {
+  FailableFuture<void> verify(String token, String email) {
     return catchException(
-      () => _ref.read(supabaseAuthDatasourceProvider).verify(token),
+      () => _ref.read(supabaseAuthDatasourceProvider).verify(token, email),
     );
   }
 

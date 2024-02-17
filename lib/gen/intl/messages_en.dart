@@ -74,6 +74,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "err_something_went_wrong": MessageLookupByLibrary.simpleMessage(
             "Something went wrong. Please try again later."),
         "err_too_short": m0,
+        "forgot_password":
+            MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "or_with": MessageLookupByLibrary.simpleMessage("Or with"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
@@ -89,6 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "verification_send_again": MessageLookupByLibrary.simpleMessage(
             "Didn’t received the code? Send again"),
         "verify": MessageLookupByLibrary.simpleMessage("Verify"),
+        "welcome_back": MessageLookupByLibrary.simpleMessage("Welcome back!"),
         "welcome_to": MessageLookupByLibrary.simpleMessage("Welcome to ")
       };
 }

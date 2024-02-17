@@ -449,6 +449,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome back!`
+  String get welcome_back {
+    return Intl.message(
+      'Welcome back!',
+      name: 'welcome_back',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot Password?`
+  String get forgot_password {
+    return Intl.message(
+      'Forgot Password?',
+      name: 'forgot_password',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

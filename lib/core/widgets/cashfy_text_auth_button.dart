@@ -5,6 +5,7 @@ import '../utils/extensions.dart';
 class CashfyTextAuthButton extends StatelessWidget {
   const CashfyTextAuthButton({
     this.padding = const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+    this.textAlign = TextAlign.center,
     this.text,
     this.clickableText,
     this.onTap,
@@ -37,6 +38,7 @@ class CashfyTextAuthButton extends StatelessWidget {
   final String? clickableText;
   final VoidCallback? onTap;
   final EdgeInsetsGeometry padding;
+  final TextAlign textAlign;
 
   @override
   Widget build(BuildContext context) {
@@ -61,6 +63,7 @@ class CashfyTextAuthButton extends StatelessWidget {
             const SizedBox(width: 4),
             Text(
               clickableText ?? '',
+              textAlign: textAlign,
               style: context.xText.body1.copyWith(
                 color: context.colorScheme.primary,
               ),

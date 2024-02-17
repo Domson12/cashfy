@@ -7,6 +7,7 @@ import '../../../core/utils/extensions.dart';
 import '../../../core/widgets/cashfy_app_bar.dart';
 import '../../../core/widgets/cashfy_flushbar.dart';
 import '../../../core/widgets/cashfy_keyboard_dismisser.dart';
+import '../../../core/widgets/loading_widget.dart';
 import 'application/register_controller.dart';
 import 'application/register_state.dart';
 import 'widgets/register_form.dart';
@@ -47,9 +48,7 @@ class RegisterPage extends ConsumerWidget {
           ),
         ),
         if (registerState == const RegisterState.loading())
-          const Center(
-            child: CircularProgressIndicator(),
-          ),
+          const LoadingWidget(),
       ],
     );
   }

@@ -41,5 +41,9 @@
   "verification_info": "If email is taken, you won't be able to use it again.",
   "err_invalid_code": "Invalid code",
   "welcome_back": "Welcome back!",
-  "forgot_password": "Forgot Password?"
+  "forgot_password": "Forgot Password?",
+  "transactions": "Transactions",
+  "budget": "Budget",
+  "profile": "Profile",
+  "home": "Home"
 }

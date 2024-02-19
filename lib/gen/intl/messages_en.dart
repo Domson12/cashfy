@@ -38,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "auth_title2":
             MessageLookupByLibrary.simpleMessage("Know where your money goes"),
         "auth_title3": MessageLookupByLibrary.simpleMessage("Planning ahead"),
+        "budget": MessageLookupByLibrary.simpleMessage("Budget"),
         "check_inbox": MessageLookupByLibrary.simpleMessage(
             "You can check your inbox or spam folder"),
         "confirm_password":
@@ -76,14 +77,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "err_too_short": m0,
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "or_with": MessageLookupByLibrary.simpleMessage("Or with"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "repeat_password":
             MessageLookupByLibrary.simpleMessage("Repeat password"),
         "sign_in_google":
             MessageLookupByLibrary.simpleMessage("Sign in with Google"),
         "sign_up": MessageLookupByLibrary.simpleMessage("Sign up"),
+        "transactions": MessageLookupByLibrary.simpleMessage("Transactions"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),
         "verification": MessageLookupByLibrary.simpleMessage("Verification"),
         "verification_info": MessageLookupByLibrary.simpleMessage(

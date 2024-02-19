@@ -67,6 +67,7 @@ dependencies:
   another_flushbar: ^1.12.30
   flutter_keyboard_visibility: ^6.0.0
   pin_code_fields: ^8.0.1
+  animated_expandable_fab: ^0.0.3
 
 dev_dependencies:
   flutter_test:
